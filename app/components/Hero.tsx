@@ -112,15 +112,27 @@ const Hero: React.FC = () => {
     <section ref={heroRef} className="relative h-screen flex items-center">
       <div className="absolute inset-0 bg-black/50 z-10" />
       <div className="absolute inset-0">
-        <Image
-          src={slides[currentSlide].image}
-          alt={slides[currentSlide].title}
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-          sizes="100vw"
-        />
+        <motion.div
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.1 }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "linear"
+          }}
+          className="h-full w-full"
+        >
+          <Image
+            src={slides[currentSlide].image}
+            alt={slides[currentSlide].title}
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+            sizes="100vw"
+          />
+        </motion.div>
       </div>
 
       <div className="container relative z-20">
