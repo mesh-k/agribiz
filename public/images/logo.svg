@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simple Leaf Icon -->
+  <path d="M10 25C10 15 20 5 30 5C40 5 50 15 50 25C50 35 40 45 30 45C20 45 10 35 10 25Z" fill="#2E7D32"/>
+  <path d="M30 5L30 45" stroke="#1B5E20" stroke-width="2"/>
+  <path d="M20 15L40 15" stroke="#1B5E20" stroke-width="2"/>
+  <path d="M20 35L40 35" stroke="#1B5E20" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="60" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#2E7D32">Peri</text>
+  <text x="110" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#FF9800">Limited</text>
+</svg> 

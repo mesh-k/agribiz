@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 30% 90%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142.1 76.2% 36.3%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl lg:text-2xl;
+  }
+
+  h6 {
+    @apply text-base md:text-lg lg:text-xl;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto;
+  }
+
+  .section-divider {
+    @apply w-20 h-1 bg-primary mx-auto mb-6;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary/90 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-secondary/90 hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-lg;
+  }
+
+  .feature-card {
+    @apply card p-6 text-center;
+  }
+
+  .product-card {
+    @apply card overflow-hidden;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300;
+  }
+
+  .nav-link {
+    @apply text-foreground hover:text-primary transition-colors duration-300;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-medium;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} 
