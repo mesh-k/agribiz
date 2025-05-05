@@ -104,25 +104,25 @@ const galleryImages: GalleryImage[] = [
   // French Beans
   {
     id: 'beans-1',
-    src: '/images/french beans/photo_2025-05-04_14-24-16.jpg',
+    src: '/images/french beans-vegetables/photo_2025-05-04_14-24-16.jpg',
     category: 'Vegetables',
     caption: 'Fresh French beans ready for harvest',
   },
   {
     id: 'beans-2',
-    src: '/images/french beans/IMG-20250504-WA0022.jpg',
+    src: '/images/french beans-vegetables/IMG-20250504-WA0022.jpg',
     category: 'Vegetables',
     caption: 'Healthy French bean plants in the field',
   },
   {
     id: 'beans-3',
-    src: '/images/french beans/IMG-20250504-WA0020.jpg',
+    src: '/images/french beans-vegetables/IMG-20250504-WA0020.jpg',
     category: 'Vegetables',
     caption: 'French bean plants in growth stage',
   },
   {
     id: 'beans-4',
-    src: '/images/french beans/IMG-20250504-WA0021.jpg',
+    src: '/images/french beans-vegetables/IMG-20250504-WA0021.jpg',
     category: 'Vegetables',
     caption: 'French bean field view',
   },
@@ -130,19 +130,19 @@ const galleryImages: GalleryImage[] = [
   // Coffee Horticulture
   {
     id: 'coffee-1',
-    src: '/images/coffee-horticulture/IMG-20250504-WA0000.jpg',
+    src: '/images/coffee/IMG-20250504-WA0000.jpg',
     category: 'Horticulture',
     caption: 'Coffee plants in our horticulture section',
   },
   {
     id: 'coffee-2',
-    src: '/images/coffee-horticulture/IMG-20250504-WA0001.jpg',
+    src: '/images/coffee/IMG-20250504-WA0001.jpg',
     category: 'Horticulture',
     caption: 'Coffee plantation showing healthy growth',
   },
   {
     id: 'coffee-3',
-    src: '/images/coffee-horticulture/IMG-20250504-WA0002.jpg',
+    src: '/images/coffee/IMG-20250504-WA0002.jpg',
     category: 'Horticulture',
     caption: 'Coffee plants in optimal growing conditions',
   },
@@ -150,25 +150,25 @@ const galleryImages: GalleryImage[] = [
   // Cabbage
   {
     id: 'cabbage-1',
-    src: '/images/cabbage-horticulture/IMG-20250504-WA0017.jpg',
+    src: '/images/cabbage-vegetables/IMG-20250504-WA0017.jpg',
     category: 'Vegetables',
     caption: 'Cabbage field showing excellent growth',
   },
   {
     id: 'cabbage-2',
-    src: '/images/cabbage-horticulture/IMG-20250504-WA0018.jpg',
+    src: '/images/cabbage-vegetables/IMG-20250504-WA0018.jpg',
     category: 'Vegetables',
     caption: 'Healthy cabbage plants ready for harvest',
   },
   {
     id: 'cabbage-3',
-    src: '/images/cabbage-horticulture/IMG-20250504-WA0019.jpg',
+    src: '/images/cabbage-vegetables/IMG-20250504-WA0019.jpg',
     category: 'Vegetables',
     caption: 'Cabbage plants in development stage',
   },
   {
     id: 'cabbage-4',
-    src: '/images/cabbage-horticulture/IMG-20250504-WA0016.jpg',
+    src: '/images/cabbage-vegetables/IMG-20250504-WA0016.jpg',
     category: 'Vegetables',
     caption: 'Cabbage field overview',
   },
