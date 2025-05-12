@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section ref={heroRef} className="relative h-screen flex items-center">
+    <section ref={heroRef} className="relative h-[80vh] min-h-[400px] sm:h-screen flex items-center">
       <div className="absolute inset-0 bg-black/50 z-10" />
       <div className="absolute inset-0">
         <motion.div
@@ -140,18 +140,19 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl"
+          className="max-w-xl sm:max-w-2xl px-2 sm:px-0"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 sm:mb-6">
             {slides[currentSlide].title}
           </h1>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-base sm:text-xl text-gray-200 mb-6 sm:mb-8">
             {slides[currentSlide].description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={slides[currentSlide].link}
-              className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg"
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              aria-label={slides[currentSlide].cta}
             >
               {slides[currentSlide].cta}
             </Link>
@@ -168,7 +169,7 @@ const Hero: React.FC = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
                   currentSlide === index 
                     ? 'bg-primary w-8' 
                     : 'bg-white/50 hover:bg-white/80'
@@ -182,14 +183,14 @@ const Hero: React.FC = () => {
           <div className="flex gap-2">
             <button
               onClick={prevSlide}
-              className="w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm flex items-center justify-center text-white transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm flex items-center justify-center text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               aria-label="Previous slide"
             >
               <FiChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm flex items-center justify-center text-white transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 backdrop-blur-sm flex items-center justify-center text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               aria-label="Next slide"
             >
               <FiChevronRight className="w-5 h-5" />
@@ -205,6 +206,7 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
         className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity duration-300"
+        aria-label="Scroll to About section"
       >
         <span className="text-sm font-medium tracking-wider">Scroll</span>
         <FiArrowDown className="w-5 h-5 animate-bounce" />

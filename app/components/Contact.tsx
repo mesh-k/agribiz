@@ -141,8 +141,11 @@ const Contact: React.FC = () => {
                     type="text"
                     id="name"
                     {...register('name', { required: 'Name is required' })}
-                    className="input-field"
+                    className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     placeholder="Your name"
+                    autoComplete="name"
+                    inputMode="text"
+                    aria-label="Name"
                   />
                   {errors.name && (
                     <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
@@ -162,8 +165,11 @@ const Contact: React.FC = () => {
                         message: 'Invalid email address',
                       },
                     })}
-                    className="input-field"
+                    className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     placeholder="Your email"
+                    autoComplete="email"
+                    inputMode="email"
+                    aria-label="Email"
                   />
                   {errors.email && (
                     <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -178,8 +184,11 @@ const Contact: React.FC = () => {
                   type="text"
                   id="subject"
                   {...register('subject', { required: 'Subject is required' })}
-                  className="input-field"
+                  className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   placeholder="Subject"
+                  autoComplete="off"
+                  inputMode="text"
+                  aria-label="Subject"
                 />
                 {errors.subject && (
                   <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
@@ -193,8 +202,10 @@ const Contact: React.FC = () => {
                   id="message"
                   rows={4}
                   {...register('message', { required: 'Message is required' })}
-                  className="input-field"
+                  className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   placeholder="Your message"
+                  autoComplete="off"
+                  aria-label="Message"
                 ></textarea>
                 {errors.message && (
                   <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
@@ -212,8 +223,9 @@ const Contact: React.FC = () => {
               )}
               <button
                 type="submit"
+                className="btn-primary w-full py-3 text-lg mt-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 disabled={isSubmitting}
-                className="btn-primary w-full"
+                aria-label="Send message"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>

@@ -44,7 +44,7 @@ const Sustainability: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col gap-6 sm:gap-8 md:flex-row justify-center max-w-6xl mx-auto">
           {initiatives.map((initiative, index) => (
             <motion.div
               key={initiative.title}
@@ -52,7 +52,9 @@ const Sustainability: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="feature-card group flex-1 flex flex-col items-center text-center p-6"
+              className="feature-card group flex-1 flex flex-col items-center text-center p-6 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-lg"
+              tabIndex={0}
+              aria-label={initiative.title}
             >
               <div className="text-4xl mb-4 text-primary group-hover:scale-110 transition-transform duration-300">
                 {initiative.icon}

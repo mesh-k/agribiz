@@ -91,7 +91,7 @@ const Products: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {filteredProducts.map((product) => (
             <motion.div
               key={product.id}
@@ -99,9 +99,9 @@ const Products: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="card overflow-hidden"
+              className="card overflow-hidden max-w-xs w-full mx-auto"
             >
-              <div className="relative h-64">
+              <div className="relative aspect-square">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -111,13 +111,17 @@ const Products: React.FC = () => {
                     const target = e.target as HTMLImageElement;
                     target.src = '/images/placeholder.svg';
                   }}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={product.id <= 3}
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-heading font-semibold mb-4">{product.name}</h3>
                 <Link
                   href={`/products/${product.id}`}
-                  className="btn-primary w-full"
+                  className="btn-primary w-full py-3 text-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  tabIndex={0}
+                  aria-label={`Learn more about ${product.name}`}
                 >
                   Learn More
                 </Link>

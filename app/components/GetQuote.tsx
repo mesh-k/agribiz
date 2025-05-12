@@ -142,8 +142,11 @@ const GetQuote: React.FC = () => {
                     type="text"
                     id="name"
                     {...register('name', { required: 'Name is required' })}
-                    className="input-field"
+                    className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     placeholder="Your name"
+                    autoComplete="name"
+                    inputMode="text"
+                    aria-label="Name"
                   />
                   {errors.name && (
                     <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
@@ -163,8 +166,11 @@ const GetQuote: React.FC = () => {
                         message: 'Invalid email address',
                       },
                     })}
-                    className="input-field"
+                    className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     placeholder="Your email"
+                    autoComplete="email"
+                    inputMode="email"
+                    aria-label="Email"
                   />
                   {errors.email && (
                     <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -180,8 +186,11 @@ const GetQuote: React.FC = () => {
                     type="tel"
                     id="phone"
                     {...register('phone', { required: 'Phone is required' })}
-                    className="input-field"
+                    className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     placeholder="Your phone number"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    aria-label="Phone"
                   />
                   {errors.phone && (
                     <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -194,7 +203,8 @@ const GetQuote: React.FC = () => {
                   <select
                     id="product"
                     {...register('product', { required: 'Product is required' })}
-                    className="input-field"
+                    className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    aria-label="Product"
                   >
                     <option value="">Select a product</option>
                     <option value="flowers">Flowers</option>
@@ -215,8 +225,11 @@ const GetQuote: React.FC = () => {
                   type="text"
                   id="quantity"
                   {...register('quantity', { required: 'Quantity is required' })}
-                  className="input-field"
+                  className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   placeholder="Estimated quantity needed"
+                  autoComplete="off"
+                  inputMode="numeric"
+                  aria-label="Quantity"
                 />
                 {errors.quantity && (
                   <p className="mt-1 text-sm text-red-600">{errors.quantity.message}</p>
@@ -230,8 +243,10 @@ const GetQuote: React.FC = () => {
                   id="message"
                   rows={4}
                   {...register('message', { required: 'Message is required' })}
-                  className="input-field"
-                  placeholder="Additional details about your request"
+                  className="input-field focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  placeholder="Your message"
+                  autoComplete="off"
+                  aria-label="Message"
                 ></textarea>
                 {errors.message && (
                   <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
@@ -249,10 +264,11 @@ const GetQuote: React.FC = () => {
               )}
               <button
                 type="submit"
+                className="btn-primary w-full py-3 text-lg mt-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 disabled={isSubmitting}
-                className="btn-primary w-full"
+                aria-label="Request quote"
               >
-                {isSubmitting ? 'Submitting...' : 'Request Quote'}
+                {isSubmitting ? 'Sending...' : 'Request Quote'}
               </button>
             </form>
           </motion.div>

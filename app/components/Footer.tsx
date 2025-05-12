@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-heading font-semibold mb-4">Pery Growers Limited</h3>
             <p className="text-gray-400 mb-4">
@@ -62,8 +62,9 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 p-2 rounded-full"
                   whileHover={{ y: -2 }}
+                  aria-label={social.href}
                 >
                   <social.icon className="w-6 h-6" />
                 </motion.a>
@@ -74,12 +75,14 @@ const Footer: React.FC = () => {
           {footerLinks.map((section) => (
             <div key={section.title}>
               <h3 className="text-xl font-heading font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors block py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      tabIndex={0}
+                      aria-label={link.label}
                     >
                       {link.label}
                     </Link>
@@ -91,7 +94,7 @@ const Footer: React.FC = () => {
 
           <div>
             <h3 className="text-xl font-heading font-semibold mb-4">Contact Info</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPinIcon className="w-5 h-5 text-gray-400 mt-1" />
                 <span className="text-gray-400">Kitale, Kenya</span>
@@ -104,7 +107,9 @@ const Footer: React.FC = () => {
                 <EnvelopeIcon className="w-5 h-5 text-gray-400 mt-1" />
                 <a 
                   href="mailto:info@perygrowers.co.ke"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded py-2"
+                  tabIndex={0}
+                  aria-label="Email info@perygrowers.co.ke"
                 >
                   info@perygrowers.co.ke
                 </a>
@@ -115,14 +120,14 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Pery Growers Limited. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 mt-0">
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded py-2" tabIndex={0} aria-label="Privacy Policy">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded py-2" tabIndex={0} aria-label="Terms of Service">
                 Terms of Service
               </Link>
             </div>
