@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
@@ -75,14 +75,20 @@ const galleryImages: GalleryImage[] = [
 const GalleryComponent: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
 
   const openGallery = (image: GalleryImage, index: number) => {
     setSelectedImage(image);
     setCurrentIndex(index);
+    // Prevent body scroll when gallery is open
+    document.body.style.overflow = 'hidden';
   };
 
   const closeGallery = () => {
     setSelectedImage(null);
+    // Restore body scroll
+    document.body.style.overflow = 'unset';
   };
 
   const showNext = () => {
@@ -95,11 +101,42 @@ const GalleryComponent: React.FC = () => {
     setSelectedImage(galleryImages[(currentIndex - 1 + galleryImages.length) % galleryImages.length]);
   };
 
-  const handlers = useSwipeable({
-    onSwipedLeft: showNext,
-    onSwipedRight: showPrevious,
-    trackMouse: true
-  });
+  // Enhanced touch handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStart) return;
+    
+    const touchEnd = e.changedTouches[0].clientX;
+    const diff = touchStart - touchEnd;
+
+    // Minimum swipe distance (50px)
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        showNext();
+      } else {
+        showPrevious();
+      }
+    }
+    
+    setTouchStart(null);
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedImage) return;
+      
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrevious();
+      if (e.key === 'Escape') closeGallery();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImage, currentIndex]);
 
   return (
     <section id="gallery" className="section">
@@ -112,7 +149,7 @@ const GalleryComponent: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {galleryImages.map((image, index) => (
             <motion.div
               key={image.id}
@@ -120,35 +157,42 @@ const GalleryComponent: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative h-64 rounded-lg overflow-hidden cursor-pointer"
+              className="relative aspect-square rounded-lg overflow-hidden cursor-pointer group"
               onClick={() => openGallery(image, index)}
             >
               <Image
                 src={image.src}
                 alt="Gallery image"
                 fill
-                className="object-cover transition-transform duration-300 hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                onLoadingComplete={() => setIsLoading(false)}
+                priority={index < 6} // Prioritize loading first 6 images
               />
+              {isLoading && (
+                <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+              )}
             </motion.div>
           ))}
         </div>
 
-        {/* Lightbox */}
+        {/* Enhanced Lightbox */}
         {selectedImage && (
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-95 z-50 flex items-center justify-center"
-            {...handlers}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             <button
               onClick={closeGallery}
-              className="absolute top-6 right-6 text-white hover:text-gray-300 transition-colors duration-300 z-50"
+              className="absolute top-4 right-4 md:top-6 md:right-6 text-white hover:text-gray-300 transition-colors duration-300 z-50 p-2"
               aria-label="Close gallery"
             >
               <svg 
-                className="w-8 h-8" 
+                className="w-6 h-6 md:w-8 md:h-8" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -164,11 +208,11 @@ const GalleryComponent: React.FC = () => {
 
             <button
               onClick={showPrevious}
-              className="absolute left-6 text-white hover:text-gray-300 transition-colors duration-300 z-50"
+              className="absolute left-2 md:left-6 text-white hover:text-gray-300 transition-colors duration-300 z-50 p-2"
               aria-label="Previous image"
             >
               <svg 
-                className="w-12 h-12" 
+                className="w-8 h-8 md:w-12 md:h-12" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -184,11 +228,11 @@ const GalleryComponent: React.FC = () => {
 
             <button
               onClick={showNext}
-              className="absolute right-6 text-white hover:text-gray-300 transition-colors duration-300 z-50"
+              className="absolute right-2 md:right-6 text-white hover:text-gray-300 transition-colors duration-300 z-50 p-2"
               aria-label="Next image"
             >
               <svg 
-                className="w-12 h-12" 
+                className="w-8 h-8 md:w-12 md:h-12" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
@@ -208,19 +252,20 @@ const GalleryComponent: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full h-full flex items-center justify-center"
+              className="relative w-full h-full flex items-center justify-center p-4 md:p-8"
             >
               <Image
                 src={selectedImage.src}
                 alt="Gallery image"
                 fill
+                sizes="100vw"
                 className="object-contain"
                 priority
               />
             </motion.div>
 
-            {/* Image counter */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white text-lg">
+            {/* Enhanced Image counter */}
+            <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 text-white text-sm md:text-lg bg-black/50 px-4 py-2 rounded-full">
               {currentIndex + 1} / {galleryImages.length}
             </div>
           </motion.div>
