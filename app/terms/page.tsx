@@ -3,8 +3,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Peri Limited',
-  description: 'Terms and conditions for using Peri Limited\'s website and services.',
+  title: 'Terms of Service | Pery Growers Limited',
+  description: 'Terms and conditions for using Pery Growers Limited\'s website and services.',
 };
 
 export default function TermsOfService() {
@@ -19,13 +19,13 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-heading font-semibold text-gray-800 mb-4">1. Introduction</h2>
               <p className="text-gray-600 mb-4">
-                Welcome to Peri Limited (&quot;we,&quot; &quot;our,&quot; &quot;us,&quot; or &quot;the Company&quot;). These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website, services, and products. By accessing or using our services, you agree to be bound by these Terms.
+                Welcome to Pery Growers Limited (&quot;we,&quot; &quot;our,&quot; &quot;us,&quot; or &quot;the Company&quot;). These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website, services, and products. By accessing or using our services, you agree to be bound by these Terms.
               </p>
               <p className="text-gray-600 mb-4">
                 If you disagree with any part of these Terms, you must not access or use the Services.
               </p>
               <p className="text-gray-600">
-                These Terms constitute a legally binding agreement between you and Peri Limited regarding your use of the Services. Please read them carefully.
+                These Terms constitute a legally binding agreement between you and Pery Growers Limited regarding your use of the Services. Please read them carefully.
               </p>
             </section>
 
@@ -35,7 +35,7 @@ export default function TermsOfService() {
                 Throughout these Terms, the following definitions apply:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
-                <li><strong>"Company," "we," "us," or "our"</strong> refers to Peri Limited, a registered company in Kenya with its principal place of business in Nairobi.</li>
+                <li><strong>"Company," "we," "us," or "our"</strong> refers to Pery Growers Limited, a registered company in Kenya with its principal place of business in Nairobi.</li>
                 <li><strong>"Website"</strong> refers to perilimited.co.ke, including all subdomains and any associated mobile applications.</li>
                 <li><strong>"You"</strong> refers to the individual accessing or using the Services, or the company, organization, or other legal entity on behalf of which such individual is accessing or using the Services.</li>
                 <li><strong>"Products"</strong> refers to the agricultural and horticultural products, including but not limited to flowers, fruits, vegetables, and herbs we grow, process, package, and export.</li>
@@ -70,7 +70,7 @@ export default function TermsOfService() {
                 <li>Accepting responsibility for all activities that occur under your account or password</li>
               </ul>
               <p className="text-gray-600 mb-4">
-                If you believe your account has been compromised, you must notify us immediately at info@perilimited.co.ke.
+                If you believe your account has been compromised, you must notify us immediately at info@perygrowers.co.ke.
               </p>
 
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">3.3 Acceptable Use</h3>
@@ -111,7 +111,7 @@ export default function TermsOfService() {
               
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">4.1 Company Content</h3>
               <p className="text-gray-600 mb-4">
-                The Website and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof), are owned by Peri Limited, its licensors, or other providers of such material and are protected by Kenyan and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+                The Website and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio, and the design, selection, and arrangement thereof), are owned by Pery Growers Limited, its licensors, or other providers of such material and are protected by Kenyan and international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
               </p>
               <p className="text-gray-600 mb-4">
                 These Terms permit you to use the Website for your legitimate business purpose or personal, non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Website, except as permitted by law or as expressly permitted in writing by us.
@@ -317,7 +317,7 @@ export default function TermsOfService() {
               
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">9.1 Limitation of Liability</h3>
               <p className="text-gray-600 mb-4">
-                To the maximum extent permitted by applicable law, in no event shall Peri Limited, its directors, employees, partners, agents, suppliers, or affiliates be liable for:
+                To the maximum extent permitted by applicable law, in no event shall Pery Growers Limited, its directors, employees, partners, agents, suppliers, or affiliates be liable for:
               </p>
               <ul className="list-disc pl-6 text-gray-600 mb-4">
                 <li>Any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses</li>
@@ -330,19 +330,19 @@ export default function TermsOfService() {
 
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">9.2 Cap on Liability</h3>
               <p className="text-gray-600 mb-4">
-                Without limiting the foregoing, in no case shall the liability of Peri Limited exceed the amount paid by you to Peri Limited for the particular Products giving rise to the claim, or if the claim does not relate to Products, the amount of USD $500.
+                Without limiting the foregoing, in no case shall the liability of Pery Growers Limited exceed the amount paid by you to Pery Growers Limited for the particular Products giving rise to the claim, or if the claim does not relate to Products, the amount of USD $500.
               </p>
 
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">9.3 Exclusions</h3>
               <p className="text-gray-600">
-                The limitations of damages set forth above are fundamental elements of the basis of the bargain between Peri Limited and you. Some jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, so the above limitations may not apply to you.
+                The limitations of damages set forth above are fundamental elements of the basis of the bargain between Pery Growers Limited and you. Some jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, so the above limitations may not apply to you.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-heading font-semibold text-gray-800 mb-4">10. Indemnification</h2>
               <p className="text-gray-600">
-                You agree to defend, indemnify, and hold harmless Peri Limited, its subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, and employees, from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
+                You agree to defend, indemnify, and hold harmless Pery Growers Limited, its subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, and employees, from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
               </p>
               <ul className="list-disc pl-6 text-gray-600">
                 <li>Your violation of these Terms</li>
@@ -357,7 +357,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-heading font-semibold text-gray-800 mb-4">11. External Links</h2>
               <p className="text-gray-600">
-                The Services may contain links to third-party websites or services that are not owned or controlled by Peri Limited. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge that Peri Limited shall not be liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such websites or services. We encourage you to read the terms and privacy policies of any third-party websites or services that you visit.
+                The Services may contain links to third-party websites or services that are not owned or controlled by Pery Growers Limited. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge that Pery Growers Limited shall not be liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such websites or services. We encourage you to read the terms and privacy policies of any third-party websites or services that you visit.
               </p>
             </section>
 
@@ -366,7 +366,7 @@ export default function TermsOfService() {
               
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">12.1 Termination by You</h3>
               <p className="text-gray-600 mb-4">
-                You may stop using the Services at any time. If you have created an account, you may delete it by following the instructions within your account settings or by contacting us at info@perilimited.co.ke.
+                You may stop using the Services at any time. If you have created an account, you may delete it by following the instructions within your account settings or by contacting us at info@perygrowers.co.ke.
               </p>
 
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">12.2 Termination by Us</h3>
@@ -414,7 +414,7 @@ export default function TermsOfService() {
               
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">15.1 Entire Agreement</h3>
               <p className="text-gray-600 mb-4">
-                These Terms, along with our Privacy Policy and any other legal notices published by us, constitute the entire agreement between you and Peri Limited concerning the Services and supersede all prior agreements, understandings, and representations regarding the same.
+                These Terms, along with our Privacy Policy and any other legal notices published by us, constitute the entire agreement between you and Pery Growers Limited concerning the Services and supersede all prior agreements, understandings, and representations regarding the same.
               </p>
 
               <h3 className="text-xl font-heading font-semibold text-gray-800 mb-2">15.2 Waiver and Severability</h3>
@@ -432,10 +432,10 @@ export default function TermsOfService() {
                 For any questions or concerns about these Terms, please contact us at:
               </p>
               <div className="text-gray-600 mt-4">
-                <p className="font-semibold">Peri Limited</p>
+                <p className="font-semibold">Pery Growers Limited</p>
                 <p>P.O. Box [Your Postal Code], Nairobi, Kenya</p>
-                <p>Email: <a href="mailto:info@perilimited.co.ke" className="text-primary hover:text-primary-dark">info@perilimited.co.ke</a></p>
-                <p>Website: <a href="https://perilimited.co.ke" className="text-primary hover:text-primary-dark">https://perilimited.co.ke</a></p>
+                <p>Email: <a href="mailto:info@perygrowers.co.ke" className="text-primary hover:text-primary-dark">info@perygrowers.co.ke</a></p>
+                <p>Website: <a href="https://perygrowers.co.ke" className="text-primary hover:text-primary-dark">https://perygrowers.co.ke</a></p>
               </div>
             </section>
 

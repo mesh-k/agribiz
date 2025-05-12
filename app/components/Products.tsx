@@ -17,84 +17,41 @@ const products: Product[] = [
   // Flowers Category
   {
     id: 1,
-    name: 'Solidago Flowers',
+    name: 'Solidago',
     category: 'Flowers',
-    description: 'Beautiful goldenrod flowers, perfect for floral arrangements and garden displays.',
+    description: '',
     image: '/images/solidago flower variety-floriculture/IMG-20250504-WA0015.jpg',
   },
   {
     id: 2,
-    name: 'Hypericum Flowers - Blooming',
+    name: 'Hypericum',
     category: 'Flowers',
-    description: 'Premium quality Hypericum flowers in full bloom, perfect for decorative purposes.',
+    description: '',
     image: '/images/hypericum flower variety-floriculture/IMG-20250504-WA0010.jpg',
-  },
-  {
-    id: 3,
-    name: 'Hypericum Flowers - Budding',
-    category: 'Flowers',
-    description: 'Young Hypericum plants showing healthy growth and development.',
-    image: '/images/hypericum flower varirty-floriculture before flowering/IMG-20250504-WA0014.jpg',
-  },
-  {
-    id: 4,
-    name: 'Hypericum Flowers - Fruiting',
-    category: 'Flowers',
-    description: 'Hypericum plants with developing fruits, ready for harvest.',
-    image: '/images/hypericum flowers after flowering fruiting and finally harvrsting/IMG-20250504-WA0003.jpg',
   },
 
   // Vegetables Category
   {
-    id: 5,
+    id: 3,
     name: 'French Beans',
     category: 'Vegetables',
-    description: 'Fresh, organic French beans grown using sustainable farming practices.',
+    description: '',
     image: '/images/french beans-vegetables/photo_2025-05-04_14-24-16.jpg',
   },
   {
-    id: 6,
-    name: 'French Beans - Field View',
-    category: 'Vegetables',
-    description: 'Healthy French bean plants thriving in our fields.',
-    image: '/images/french beans-vegetables/IMG-20250504-WA0022.jpg',
-  },
-  {
-    id: 7,
+    id: 4,
     name: 'Cabbage',
     category: 'Vegetables',
-    description: 'Fresh, healthy cabbage grown using organic farming methods.',
+    description: '',
     image: '/images/cabbage-vegetables/IMG-20250504-WA0017.jpg',
   },
-  {
-    id: 8,
-    name: 'Cabbage - Field View',
-    category: 'Vegetables',
-    description: 'Premium quality cabbage plants in our fields.',
-    image: '/images/cabbage-vegetables/IMG-20250504-WA0018.jpg',
-  },
-
   // Horticulture Category
   {
-    id: 9,
-    name: 'Coffee Plants',
+    id: 5,
+    name: 'Coffee',
     category: 'Horticulture',
-    description: 'High-quality coffee plants cultivated in optimal conditions for premium yield.',
+    description: '',
     image: '/images/coffee/IMG-20250504-WA0000.jpg',
-  },
-  {
-    id: 10,
-    name: 'Coffee Plantation',
-    category: 'Horticulture',
-    description: 'Our coffee plantation showing healthy growth and development.',
-    image: '/images/coffee/IMG-20250504-WA0001.jpg',
-  },
-  {
-    id: 11,
-    name: 'Coffee Plants - Close View',
-    category: 'Horticulture',
-    description: 'Detailed view of our premium coffee plants.',
-    image: '/images/coffee/IMG-20250504-WA0002.jpg',
   }
 ];
 
@@ -157,8 +114,7 @@ const Products: React.FC = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-heading font-semibold mb-2">{product.name}</h3>
-                <p className="text-muted-foreground mb-4">{product.description}</p>
+                <h3 className="text-xl font-heading font-semibold mb-4">{product.name}</h3>
                 <Link
                   href={`/products/${product.id}`}
                   className="btn-primary w-full"

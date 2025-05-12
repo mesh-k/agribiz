@@ -37,11 +37,11 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.svg"
-              alt="Peri Limited Logo"
-              width={150}
-              height={40}
-              className="h-10 w-auto"
+              src="/images/logo.png"
+              alt="Pery Growers Limited Logo"
+              width={300}
+              height={80}
+              className="h-16 w-auto"
             />
           </Link>
 

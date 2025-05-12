@@ -3,8 +3,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | Peri Limited',
-  description: 'Learn about how Peri Limited uses cookies and similar technologies on our website.',
+  title: 'Cookie Policy | Pery Growers Limited',
+  description: 'Learn about how Pery Growers Limited uses cookies and similar technologies on our website.',
 };
 
 export default function CookiePolicy() {
@@ -19,7 +19,7 @@ export default function CookiePolicy() {
             <section className="mb-8">
               <h2 className="text-2xl font-heading font-semibold text-gray-800 mb-4">1. Introduction</h2>
               <p className="text-gray-600 mb-4">
-                This Cookie Policy explains how Peri Limited ("we", "us", or "our") uses cookies and similar technologies to recognize you when you visit our website at perilimited.co.ke ("Website"). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
+                This Cookie Policy explains how Pery Growers Limited ("we", "us", or "our") uses cookies and similar technologies to recognize you when you visit our website at perygrowers.co.ke ("Website"). It explains what these technologies are and why we use them, as well as your rights to control our use of them.
               </p>
             </section>
 
@@ -29,7 +29,7 @@ export default function CookiePolicy() {
                 Cookies are small text files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.
               </p>
               <p className="text-gray-600 mb-4">
-                Cookies set by the website owner (in this case, Peri Limited) are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website.
+                Cookies set by the website owner (in this case, Pery Growers Limited) are called "first-party cookies". Cookies set by parties other than the website owner are called "third-party cookies". Third-party cookies enable third-party features or functionality to be provided on or through the website.
               </p>
             </section>
 
@@ -87,7 +87,7 @@ export default function CookiePolicy() {
                 If you have any questions about our use of cookies or other technologies, please contact us at:
               </p>
               <p className="text-gray-600">
-                Email: <a href="mailto:info@perilimited.co.ke" className="text-primary hover:text-primary-dark">info@perilimited.co.ke</a>
+                Email: <a href="mailto:info@perygrowers.co.ke" className="text-primary hover:text-primary-dark">info@perygrowers.co.ke</a>
               </p>
             </section>
 

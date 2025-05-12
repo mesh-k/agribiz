@@ -15,9 +15,9 @@ const Map: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Location</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="section-title">Our Location</h2>
+          <div className="section-divider" />
+          <p className="section-subtitle">
             Visit our farm in Kitale, Kenya&apos;s agricultural heartland, where we cultivate premium horticultural products.
           </p>
         </motion.div>

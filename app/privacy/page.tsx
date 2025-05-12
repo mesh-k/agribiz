@@ -3,8 +3,8 @@ import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Peri Limited',
-  description: 'Learn about how Peri Limited collects, uses, and protects your personal information.',
+  title: 'Privacy Policy | Pery Growers Limited',
+  description: 'Learn about how Pery Growers Limited collects, uses, and protects your personal information.',
 };
 
 export default function PrivacyPolicy() {
@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
             <section className="mb-8">
               <h2 className="text-2xl font-heading font-semibold text-gray-800 mb-4">1. Introduction</h2>
               <p className="text-gray-600 mb-4">
-                Welcome to Peri Limited (&quot;we,&quot; &quot;our,&quot; &quot;us,&quot; or &quot;the Company&quot;). We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, communicate with us, or engage with our services relating to our premium Kenyan horticulture export business.
+                Welcome to Pery Growers Limited (&quot;we,&quot; &quot;our,&quot; &quot;us,&quot; or &quot;the Company&quot;). We respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, communicate with us, or engage with our services relating to our premium Kenyan horticulture export business.
               </p>
               <p className="text-gray-600 mb-4">
                 This policy applies to information we collect:
@@ -412,8 +412,8 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy or our privacy practices, please contact our Data Protection Officer:
               </p>
               <div className="text-gray-600">
-                <p className="font-semibold">Peri Limited</p>
-                <p>Email: <a href="mailto:info@perilimited.co.ke" className="text-primary hover:text-primary-dark">info@perilimited.co.ke</a></p>
+                <p className="font-semibold">Pery Growers Limited</p>
+                <p>Email: <a href="mailto:info@perygrowers.co.ke" className="text-primary hover:text-primary-dark">info@perygrowers.co.ke</a></p>
                 <p>Postal Address: P.O. Box 12345-00100, Nairobi, Kenya</p>
                 <p>Phone: +254 700 123 456</p>
               </div>

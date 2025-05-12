@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-heading font-semibold mb-4">Peri Limited</h3>
+            <h3 className="text-xl font-heading font-semibold mb-4">Pery Growers Limited</h3>
             <p className="text-gray-400 mb-4">
               Leading the way in sustainable horticulture and agricultural excellence in Kenya.
             </p>
@@ -103,10 +103,10 @@ const Footer: React.FC = () => {
               <li className="flex items-start space-x-3">
                 <EnvelopeIcon className="w-5 h-5 text-gray-400 mt-1" />
                 <a 
-                  href="mailto:info@perilimited.co.ke"
+                  href="mailto:info@perygrowers.co.ke"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  info@perilimited.co.ke
+                  info@perygrowers.co.ke
                 </a>
               </li>
             </ul>
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Peri Limited. All rights reserved.
+              © {currentYear} Pery Growers Limited. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">

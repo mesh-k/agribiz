@@ -23,7 +23,10 @@ const Navbar: React.FC = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-heading font-bold text-primary">Peri Limited</span>
+            <span className="text-2xl font-heading font-bold text-primary flex items-center">
+              <span className="text-green-500 mr-1">🌸</span>
+              Pery Growers Limited
+            </span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

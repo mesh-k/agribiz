@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Peri Limited - Premium Horticulture Products',
+  title: 'Pery Growers Limited - Premium Horticulture Products',
   description: 'Discover our sustainable farming practices and premium horticulture products from Kenya.',
 }
 

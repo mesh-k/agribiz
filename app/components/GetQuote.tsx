@@ -94,10 +94,10 @@ const GetQuote: React.FC = () => {
                     <p className="font-medium">Email</p>
                     <p className="text-muted-foreground">
                       <a 
-                        href="mailto:info@perilimited.co.ke"
+                        href="mailto:info@perygrowers.co.ke"
                         className="hover:text-primary transition-colors"
                       >
-                        info@perilimited.co.ke
+                        info@perygrowers.co.ke
                       </a>
                     </p>
                   </div>

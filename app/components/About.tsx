@@ -47,7 +47,7 @@ const About: React.FC = () => {
     <section id="about" className="section">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="section-title">About Peri Limited</h2>
+          <h2 className="section-title">About Pery Growers Limited</h2>
           <div className="section-divider" />
           <p className="section-subtitle">
             Discover our commitment to sustainable agriculture and premium quality products
@@ -64,7 +64,7 @@ const About: React.FC = () => {
           >
             <Image
               src="/images/About/IMG-20250504-WA0011.jpg"
-              alt="Peri Limited Farm"
+              alt="Pery Growers Limited Farm"
               width={600}
               height={400}
               className="rounded-lg shadow-lg"
@@ -80,7 +80,7 @@ const About: React.FC = () => {
           >
             <h3 className="text-2xl md:text-3xl font-heading font-bold mb-6">Our Story</h3>
             <p className="text-muted-foreground mb-6">
-              Founded in 2025, Peri Limited has grown from a small family farm to a leading horticulture exporter. 
+              Founded in 2025, Pery Growers Limited has grown from a small family farm to a leading horticulture exporter. 
               Our commitment to quality and sustainability has earned us recognition in international markets.
             </p>
             <p className="text-muted-foreground mb-8">
